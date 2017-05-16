@@ -1,0 +1,22 @@
+h2 {
+  color: #f04e2f;
+}
+
+button {
+  background-color: #f04e2f;
+  color: white;
+  border-radius: 30px;
+}
+
+.news{
+  float: right;
+}
+
+.ticket {
+  text-align: left;
+  float:left;
+}
+
+.item {
+  border-color: #f04e2f;
+}
