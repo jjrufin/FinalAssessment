@@ -11,7 +11,7 @@ app.controller('ticketCtrl', function ($scope){
 
   $scope.getTotal = function (confirmed) {
     console.log('this function is working');
-    $scope.confirmedList.push({name: confirmed.name, amount: confirmed.amount });
+    $scope.confirmedList.unshift({name: confirmed.name, amount: confirmed.amount });
     console.log($scope.confirmedList);
 
 

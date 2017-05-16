@@ -1,11 +1,22 @@
 h2 {
   color: #f04e2f;
+  padding-bottom: 30px;
 }
 
 button {
   background-color: #f04e2f;
   color: white;
   border-radius: 30px;
+}
+
+.left {
+  text-align: left;
+  float: left;
+}
+
+.middle {
+  text-align: right;
+  float: right;
 }
 
 .news{
@@ -18,5 +29,10 @@ button {
 }
 
 .item {
+  background-color: white;
+  border-style: solid;
   border-color: #f04e2f;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
 }

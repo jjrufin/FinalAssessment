@@ -13,18 +13,28 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body ng-app="ticketKiosk" ng-controller="ticketCtrl">
-        <span class="ticket">
+        <div class="ticket">
           <h2>Ticket Kiosk</h2>
-          <label>Name: <input type="text" ng-model="add.name"/></label></br>
-          <label># of Tickets: <input type="number" ng-model="add.amount"/></label></br>
-          <label>Price: $2.50</label></br>
-          <label>Total: ${{ add.amount * price }}</label></br>
-          <button ng-click="getTotal(add)">Buy</button>
-        </span>
+            <div class="left">
+              <label>Name:</label></br>
+              <label># of Tickets:</label></br>
+              <label>Price:</label></br>
+              <label>Total:</label></br>
+            <button type="button" ng-click="getTotal(add)">Buy</button>
+            </div>
+            <span class="middle">
+              <input type="text" ng-model="add.name"/></br>
+              <input type="number" ng-model="add.amount" value="1"/></br>
+              <p>${{ price | number: 2 }}</p>
+              <p>${{ add.amount * 2.5 | number: 2}}</p>
+            </span>
+        </div>
         <span class="news">
         <div>
           <h2>News Feed</h2>
-          <p ng-repeat="confirmed in confirmedList"> <span class="item">{{ confirmed.name }} bought {{ confirmed.amount }} tickets </span></p>
+          <div ng-repeat="confirmed in confirmedList">
+            <p class="item">{{ confirmed.name }} bought {{ confirmed.amount }} tickets</p>
+          </div>
         </div>
         </span>
 
